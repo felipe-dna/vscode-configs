@@ -1,37 +1,58 @@
 {   
-    // workbench settings
+    // Themes
     "workbench.colorTheme": "Dracula",
-    "terminal.integrated.rendererType": "dom",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "newUntitledFile",  
-
-    // font settings
+    
+    // Font
     "editor.fontSize": 14,
-    "editor.lineHeight": 20,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
+    
+    // Window
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "newUntitledFile",  
+    "explorer.confirmDelete": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",  
+    
+    // Terminal
+    "terminal.integrated.rendererType": "dom",
+
+    // ...
+    "editor.renderWhitespace": "all",
+    "editor.lineHeight": 20,
 
     // Apply vertical lines
     "editor.rulers": [80, 120],
+    
+    // Prettier
     "prettier.eslintIntegration": true,
 
-    "window.zoomLevel": 1,
-    "editor.renderWhitespace": "all",
-    "files.associations": {
-        "*.html": "html"
-    },
-    "explorer.confirmDelete": false,
+    // Python and Django Settings
+    ["django-html": {},
+   
+    
+    // JavaScript and React Settings
     "[javascript]": {},
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    
 
-    // emmet 
+    // Emmet Settings
     "emmet.syntaxProfiles": {
         "javascript": "jsx"
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
         "nunjucks": "html",
+        "django-html": "html"
     },
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",    
+    
+    // Files
+        "files.associations": {
+        "*.html": "html"
+        "**/templates/*.html": "django-html",
+        "**/templates/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+  
 }
